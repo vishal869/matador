@@ -229,6 +229,10 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     font-weight: 700;
     border: none;
     min-width: 300px;
+    transition: 0.2s ease-in-out;
+}
+.cs_footer .download_btn:hover{
+    opacity: 0.8;
 }
 
 .cs_footer p{
