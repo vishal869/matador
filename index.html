@@ -9,19 +9,20 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" type="text/css" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
    </head>
    <body>
      
       <header class="cs_header">
          <div class="container">
-            <a href="javascript:;" class="logo"><img src="images/logo.svg" alt="" /></a>
+            <a href="javascript:;" class="logo" data-aos="fade"><img src="images/logo.svg" alt="" /></a>
          </div>
       </header>
 
       <section class="banner_section">
          <div class="container">
-            <div class="herobanner_inner_ui">
+            <div class="herobanner_inner_ui" data-aos="fade-up" data-aos-delay="300">
                <div class="hero_img"><img src="images/hero_banner.png" alt="" /></div>
                <div class="contnet_blk">
                   <h1>Automated <span>Selling</span></h1>
@@ -32,13 +33,13 @@
       </section>
 
       <section class="benifits_sec">
-         <div class="heading_wrap">
+         <div class="heading_wrap" data-aos="fade" data-aos-delay="300">
             <h3>Instant Benefits</h3>
          </div>
          <div class="container">
             <div class="row">
                <div class="col-md-4">
-                  <div class="benifits_card">
+                  <div class="benifits_card" data-aos="fade-up" data-aos-delay="100">
                      <figure><img src="images/better_customer.png" alt="" /></figure>
                      <div class="content_ui">
                         <p>Better Customer
@@ -47,7 +48,7 @@
                   </div>
                </div>
                <div class="col-md-4">
-                  <div class="benifits_card">
+                  <div class="benifits_card" data-aos="fade-up" data-aos-delay="200">
                      <figure><img src="images/sale_team.png" alt="" /></figure>
                      <div class="content_ui">
                         <p>Improved Sales
@@ -57,7 +58,7 @@
                </div>
 
                <div class="col-md-4">
-                  <div class="benifits_card">
+                  <div class="benifits_card" data-aos="fade-up" data-aos-delay="300">
                      <figure><img src="images/marketing_investment.png" alt="" /></figure>
                      <div class="content_ui">
                         <p>Better ROI On Your
@@ -72,11 +73,11 @@
 
       <section class="workforce_sec">
          <div class="container">
-            <div class="heading_wrap">
+            <div class="heading_wrap" data-aos="fade-up" data-aos-delay="300">
                <h3>Your A.I. Workforce</h3>
             </div>
             <div class="workforce_card_wrap">
-               <div class="workforce_card">
+               <div class="workforce_card" data-aos="fade-up" data-aos-delay="100">
                   <figure>
                      <div class="image_wrap">
                         <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="" />
@@ -88,7 +89,7 @@
                   </div>
                </div>
 
-               <div class="workforce_card">
+               <div class="workforce_card" data-aos="fade-up" data-aos-delay="200">
                   <figure>
                      <div class="image_wrap">
                         <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="" />
@@ -100,7 +101,7 @@
                   </div>
                </div>
 
-               <div class="workforce_card">
+               <div class="workforce_card" data-aos="fade-up" data-aos-delay="300">
                   <figure>
                      <div class="image_wrap">
                         <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="" />
@@ -112,7 +113,7 @@
                   </div>
                </div>
 
-               <div class="workforce_card">
+               <div class="workforce_card" data-aos="fade-up" data-aos-delay="400">
                   <figure>
                      <div class="image_wrap">
                         <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" alt="" />
@@ -131,13 +132,13 @@
       <footer class="cs_footer">
          <div class="container">
             <div class="row">
-               <div class="col-md-6 align-self-center">
-                  <div class="btn_wrap">
+               <div class="col-md-6 align-self-center" >
+                  <div class="btn_wrap" data-aos="fade-up" data-aos-delay="100">
                      <button class="download_btn">Download</button>
                   </div>
                </div>
                <div class="col-md-6 align-self-center">
-                  <p>Our SMS Marketing Manual
+                  <p data-aos="fade-up" data-aos-delay="200">Our SMS Marketing Manual
                      For Car Dealers</p>
                </div>
             </div>
@@ -147,5 +148,15 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+           AOS.init({
+            once: true,
+            duration: 1000,
+            offset: 100,
+            mirror: true,
+            //disable: 'mobile'
+        });
+      </script>
    </body>
 </html>
