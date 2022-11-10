@@ -119,9 +119,100 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
 
 .workforce_sec{
     background: #693dc5;
-    padding: 100px 0;
+    padding: 40px 0 100px;
+}
+.workforce_card_wrap{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.workforce_card{
+    width:25%;
+    max-width: 230px;
+    position: relative;
+}
+.workforce_card:first-child figure:after,
+.workforce_card:nth-child(3) figure:after{
+    background: url("../images/border_shadow.png");
+    position: absolute;
+    content: "";
+    right: -100px;
+    bottom:0;
+    width:100px;
+    height:100px;
+}
+.workforce_card:nth-child(2) figure:after,
+.workforce_card:nth-child(4) figure:after{
+    background: url("../images/border_shadow.png");
+    position: absolute;
+    content: "";
+    right: -70px;
+    top: -17px;
+    width: 88px;
+    height: 92px;
+    transform: rotate(165deg);
+}
+.workforce_card:nth-child(4) figure:after{
+    display: none;
+}
+.workforce_sec .heading_wrap{
+    margin-bottom:60px;
 }
 
+.workforce_sec .heading_wrap h3{
+    text-align: center;
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.workforce_card figure{
+    width:230px;
+    background: rgba(255,255,255,0.3);
+    height:230px;
+    border-radius: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.workforce_card .image_wrap{
+    width:190px;
+    background: rgba(255,255,255,0.2);
+    height:190px;
+    border-radius: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.workforce_card .image_wrap img{
+    width:160px;
+    height: 160px;
+    border-radius: 100%;
+}
+
+.workforce_card .content_blk{
+    text-align: left;
+    margin-top: 40px
+}
+
+.workforce_card .content_blk h5{
+    max-width: 190px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.workforce_card .content_blk p{
+    font-size: 15px;
+    color:rgba(255,255,255,0.8);
+    line-height: 24px;
+    font-weight: 300;
+}
 
 .cs_footer{
     padding: 40px 0;
