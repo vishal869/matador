@@ -372,6 +372,12 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     .herobanner_inner_ui{
         padding-bottom: 50px;
     }
+    .benifits_sec .heading_wrap h3{
+        font-size: 30px;
+    }
+    .workforce_sec .heading_wrap h3{
+        font-size: 32px;
+    }
 }
 
 @media (max-width:599px){
@@ -382,4 +388,23 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
         max-width: 250px;
         margin-bottom: 0;
     }
+
+    .herobanner_inner_ui .contnet_blk h1{
+        font-size: 32px;
+    }
+    .benifits_sec .heading_wrap h3{
+        font-size: 26px;
+    }
+    .benifits_card figure{
+        width: 80px;
+    }
+    .benifits_card .content_ui p{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    .herobanner_inner_ui .contnet_blk p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
 }
