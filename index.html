@@ -13,7 +13,50 @@
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
    </head>
    <body>
-  
+    <!-- header html start -->
+    <div class="header-main-block text-center">
+      <div class="container">
+         <div class="header-inner-block"> 
+         <div class="delos_logo">
+            <a href="index.html">
+            <img src="images/delos-logo.png" alt="">
+            </a>
+         </div>
+         <button class="navbar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+         </button>
+         <div class="block-right-header">
+            <div class="navigation-main">
+               <ul>
+                  <li>
+                     <a href="index.html" class="active">Home</a>
+                  </li>
+                  <li>
+                     <a href="about.html">About Us</a>
+                  </li>
+                  <li>
+                     <a href="sem.html">Accelerate SEM</a> 
+                  </li>
+                  
+                  <li>
+                     <a href="seo.html">Accelerate SEO</a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">Matador</a>
+                  </li>
+                  <li>
+                     <a href="javascript:;">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+<!-- header htm close --->
+
       <section class="banner_section">
          <div class="container">
             <div class="herobanner_inner_ui" data-aos="fade-up" data-aos-delay="300">
@@ -195,6 +238,12 @@
             mirror: true,
             //disable: 'mobile'
         });
+        $(".header-main-block .navbar-icon").click(function(){
+         $(".header-main-block .navbar-icon").toggleClass("close");
+         $(".block-right-header").toggleClass("active");
+         $(".overflow-bg").toggleClass("active");
+         $("body").toggleClass("overflow");
+         }) 
       </script>
    </body>
 </html>

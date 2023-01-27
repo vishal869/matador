@@ -12,6 +12,123 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     padding: 0;
 }
 
+
+.navbar-icon {
+    display: none;
+}
+.navbar-icon {
+    width: 28px;
+    height: 18px;
+    cursor: pointer; /* Comment this when use on Tablets/Smartphones */
+    position: relative;
+}
+.navbar-icon span {
+    position: absolute;
+    background: #222;
+    width: 100%;
+    height: 20%;
+    transition: .2s .2s top, .2s .2s bottom, .1s transform;
+    border-radius: 100px;
+    right: 0;
+}
+.navbar-icon span:nth-of-type(1) {
+    top: 0;
+}
+.navbar-icon span:nth-of-type(2) {
+    top: 40%;
+    opacity: 1;
+    transition: opacity .1s .2s;
+}
+.navbar-icon span:nth-of-type(3) {
+    bottom: 0;
+}
+
+/* Animation */
+.close span {
+    transition: .2s top, .2s bottom, .2s .2s transform;
+}
+.close span:nth-of-type(1) {
+    top: 40%;
+    transform: rotate(45deg);
+}
+.close span:nth-of-type(2) {
+    opacity: 0;
+    transition: opacity .1s .2s;
+}
+.close span:nth-of-type(3) {
+    bottom: 44%;
+    transform: rotate(-45deg);
+}
+
+
+.header-main-block {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    padding: 15px 0;
+    background-color: #1b1b1b;
+    -webkit-transition: -webkit-box-shadow 0.2s ease;
+    transition: -webkit-box-shadow 0.2s ease;
+    -o-transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease;
+    transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    left:0;
+    top:0;
+    z-index: 999;
+}
+
+.header-main-block.fixed{
+    position: fixed;
+    top:0;
+    padding:8px 0;
+}
+.delos_logo{
+    width:250px;
+    display: flex;
+    justify-content: flex-start;
+    transition: 0.2s ease-in-out;
+}
+.delos_logo img{
+    width: 100%;
+}
+.header-main-block.fixed .logo{ width:220px; }
+
+.header-inner-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-main ul{ display: flex; align-items: center; }
+.navigation-main ul li{list-style: none;padding: 0 15px;}
+.navigation-main ul li a{ font-size: 16px; color: #fff; font-family: 'Raleway', sans-serif; position: relative;}
+.navigation-main ul li a.active{
+    font-weight: 600;
+}
+.navigation-main ul li a:hover{text-decoration: none;}
+.navigation-main ul li a:after{
+    position: absolute;
+    content: "";
+    height:2px;
+    width:100%;
+    left:0;
+    bottom: -15px;
+    background:#6a2b21;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.navigation-main ul li a:hover:after,
+.navigation-main ul li a.active:after{
+    opacity: 1;
+    bottom:-10px;
+}
+
+
+
+
 .container{
     max-width: 1170px;
     margin: auto;
@@ -389,6 +506,17 @@ font-size: 18px;
     .workforce_card:nth-child(2) figure:after, .workforce_card:nth-child(4) figure:after{
         display: none;
     }
+
+    
+    .delos_logo img{
+        width:170px;
+    }
+    .navigation-main ul li a{
+        font-size: 14px;
+    }
+    .navigation-main ul li{
+        padding: 0 7px;
+    }
 }
 
 @media (max-width:767px){
@@ -439,6 +567,85 @@ font-size: 18px;
     .workforce_sec .heading_wrap h3{
         font-size: 32px;
     }
+
+    .navbar-icon {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 28px;
+        height: 18px;
+        background: none;
+        border: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-right:0px;
+    }
+    .navbar-icon:focus{
+        outline: none;
+        box-shadow: none;
+    }
+    .navbar-icon span {
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    
+    .navigation-main ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .navigation-main ul li {
+        padding: 0 10px;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .block-right-header{
+        position: fixed;
+        display: block;
+        width: 76%;
+        top: 0;
+        background: #1b1b1b;
+        left: 0;
+        height: 100vh;
+        padding: 45px 15px 15px;
+        transition: 0.5s ease-in-out;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .block-right-header.active {
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+        display: block;
+    }
+    
+    .navbar-icon span:nth-of-type(2) {
+        top: 45%;
+        opacity: 1;
+        transition: opacity .1s .2s;
+    }
+    .close span:nth-of-type(1) {
+        top: 40%;
+        transform: rotate(45deg);
+    }
+    .close span:nth-of-type(2) {
+        opacity: 0;
+        transition: opacity .1s .2s;
+    }
+    .close span:nth-of-type(3) {
+        bottom: 44%;
+        transform: rotate(-45deg);
+    }
 }
 
 @media (max-width:599px){
@@ -471,6 +678,7 @@ font-size: 18px;
     .contact_form h4{
         font-size: 24px;
         font-weight: 600;
+        line-height: 36px;
     }
     .contact_form .form_block{
         padding:30px 24px;
