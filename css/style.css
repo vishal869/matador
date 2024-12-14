@@ -482,14 +482,14 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     width:100%;
     position: relative;
 }
-.chat_ui:after{
+.chat_ui  .wrapper:after{
     position: absolute;
     content: "";
     background: url(../images/ic_msg.png) no-repeat;
     width: 250px;
     height: 250px;
     background-size: 100%;
-    left:2%;
+    left:-12%;
     bottom:30%;
 }
 .chat_ui .wrapper {
@@ -498,6 +498,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     border: 1px solid rgba(255,255,255,0.102);
     padding:40px 60px;
     box-shadow: 0 0px 5px 4px #927cb8;
+    position: relative;
 }
 .chat_ui .wrapper .title{
     font-size: 60px;
