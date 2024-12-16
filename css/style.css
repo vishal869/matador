@@ -176,9 +176,9 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     font-weight: 800;
 }
 .hero_content_area .right_sec {
-    margin-left: -238px;
+    margin-left: -252px;
     position: relative;
-    margin-top: 14px;
+    margin-top: 50px;
 }
 .hero_content_area .right_sec img{
     width: 100%;;
@@ -248,6 +248,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     background:url(../images/benefits_bg.png) no-repeat;
     padding: 85px;
     background-size: 100%;
+
 }
 
 .benifits_sec{
@@ -491,6 +492,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     background-size: 100%;
     left:-12%;
     bottom:30%;
+    display: none;
 }
 .chat_ui .wrapper {
     border-radius: 84px;
@@ -552,6 +554,7 @@ h1,h2,h3,h4,h5,h6, p, ul, li , a{
     right: 12px;
     background: url(../images/chat_icon.svg) no-repeat;
     background-size: 100%;
+    display: none;
 }
 
 .form_block .form-group label{
@@ -615,34 +618,59 @@ font-family: "Plus Jakarta Sans", sans-serif;
     .benifits_sec .heading_wrap h3{
         font-size: 36px;
     }
+
+    .hero_content_area .left_sec h4{
+        font-size: 64px;
+    }
+    .hero_content_area .left_sec{
+        width: 100%;
+    }
+    .hero_content_area .right_sec{
+        margin-left: 0;
+    }
+    .workforce_card:first-child figure:after, .workforce_card:nth-child(3) figure:after,
+    .workforce_card:nth-child(2) figure:after, .workforce_card:nth-child(4) figure:after{
+        display: none;
+    }
 }
 
 @media (max-width:991px){
-    .herobanner_inner_ui{
-        flex-direction: column;
+
+    .hero_content_area {
+        flex-direction: column-reverse;
     }
-    .herobanner_inner_ui .hero_img{
-        order: 2;
-        width:100%;
-        left: 0;
-        border-radius: 0;
+    .hero_content_area .right_sec{
+        max-width: 800px;
+        margin-bottom: 50px;
     }
-    .herobanner_inner_ui .contnet_blk{
-        order: 1;
-        padding-top: 30px;
-        width:100%;
+    .benfit_bg{
+        padding-top: 50px;
+        background: #362677;
+        box-shadow: 0 1px 2px 5px #615fe1;
+        max-width: 97%;
+    }
+    .benifits_sec{
+        padding-bottom: 50px;
+    }
+
+    .benifits_card .content_ui p{
+        font-size: 20px;;
     }
     .workforce_card figure{
         width:170px;
         height:170px;
     }
     .workforce_card .image_wrap{
-        width:85%;
-        height:85%;
+        /* width:85%;
+        height:85%; */
+        width:146px;
+        height: 146px;
     }
     .workforce_card .image_wrap img{
-        width:80%;
-        height:80%;
+        /* width:80%;
+        height:80%; */
+        width:146px;
+        height: 146px;
     }
     .workforce_card:first-child figure:after, .workforce_card:nth-child(3) figure:after,
     .workforce_card:nth-child(2) figure:after, .workforce_card:nth-child(4) figure:after{
@@ -659,11 +687,46 @@ font-family: "Plus Jakarta Sans", sans-serif;
     .navigation-main ul li{
         padding: 0 7px;
     }
+    .workforce_card:first-child figure:after, .workforce_card:nth-child(3) figure:after{
+        display: none;
+    }
+    .workforce_card figure{
+        width: 148px;
+        height: 148px;
+    }
+    .workforce_card .content_blk h5{
+        font-size: 20px;
+    }
 }
 
 @media (max-width:767px){
+
+    .hero_content_area .left_sec h4{
+        font-size: 54px;
+    }
+    .benifits_sec .title_wrapper{
+        width: 100%;
+    }
     .workforce_card_wrap{
         flex-wrap: wrap;
+    }
+    .benifits_sec .title_wrapper p{
+        font-size: 28px;
+        line-height: 48px;
+    }
+    .chat_ui .wrapper{
+        border-radius: 30px;
+        padding: 30px 30px;
+    }
+    .chat_ui .wrapper .title{
+        font-size: 36px;
+    }
+    .contact_form .form_block{
+        border-radius: 30px;
+    }
+    .contact_form{
+        padding-bottom: 100px;
+        margin-top: 0;
     }
     .workforce_sec{
         padding-bottom: 30px;
@@ -807,6 +870,10 @@ font-family: "Plus Jakarta Sans", sans-serif;
     }
     .benifits_card figure{
         width: 80px;
+        height: auto;
+    }
+    .benfit_bg{
+        padding: 50px 30px  30px;
     }
     .benifits_card .content_ui p{
         font-size: 20px;
@@ -824,6 +891,10 @@ font-family: "Plus Jakarta Sans", sans-serif;
     }
     .contact_form .form_block{
         padding:30px 24px;
+    }
+
+    .hero_content_area .left_sec h4{
+        font-size: 42px;
     }
     
 }
